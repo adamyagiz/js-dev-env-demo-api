@@ -1,5 +1,6 @@
 var express =  require('express');
 var cors = require('cors');
+var version = '0.1.1';
 
 const app = express();
 app.use(cors());
@@ -7,7 +8,7 @@ app.use(cors());
 app.set('port', (process.env.PORT || 5000));
 
 app.get('/', function(request, response) {
-  response.send('Hello World!')
+  response.send(`Hello World! App version: ${version}`);
 });
 
 app.get('/users', function(req, res) {
@@ -20,5 +21,5 @@ app.get('/users', function(req, res) {
 });
 
 app.listen(app.get('port'), function() {
-  console.log("Node app is running at localhost:" + app.get('port')); 
+  console.log("Node app is running at localhost:" + app.get('port'));
 });
