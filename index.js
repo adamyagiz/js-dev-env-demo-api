@@ -1,6 +1,6 @@
 var express =  require('express');
 var cors = require('cors');
-var version = '0.1.1';
+var version = '0.1.2';
 
 const app = express();
 app.use(cors());
